@@ -3,103 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azienda XYZ - Hub di Contatti</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pJ6ZfY2ltvhf0FvAjQeH8NGQH+wpG7x2E68UPlfz0yaKu0GCgmOr9WWr9jB44HhDlc5fL7jG7X5w+0sDb9a4Kg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>TAPnTRADE - E-commerce TCG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset e stili base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --gradient1: linear-gradient(135deg, #F4E7E3, #F8B195);
+      --gradient2: linear-gradient(135deg, #DCE8F2, #355C7D);
+      --gradient3: linear-gradient(135deg, #C4F1BE, #6AA84F);
+    }
+
     body {
-      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--gradient1);
+      color: #333;
+    }
+
+    header {
+      background: var(--gradient2);
+      color: white;
+      padding: 1rem 2rem;
       display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background: #ffffff;
-      color: #333333;
+      justify-content: space-between;
+      align-items: center;
     }
-    header, footer {
-      background: #f8f9fa;
-      text-align: center;
-      padding: 20px;
-    }
+
     header h1 {
+      margin: 0;
       font-size: 2rem;
-      margin-bottom: 5px;
     }
-    main {
-      flex: 1;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .history {
-      margin-bottom: 40px;
-    }
-    .history h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-    .history p {
-      line-height: 1.6;
-    }
-    .purchase-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-    .purchase-links a {
+
+    nav a {
+      color: white;
+      margin-left: 2rem;
       text-decoration: none;
-      background: #007bff;
-      color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 5px;
-      font-weight: 700;
-      transition: background 0.3s ease;
+      font-weight: bold;
     }
-    .purchase-links a:hover {
-      background: #0056b3;
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: var(--gradient3);
+      color: white;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
-    .social-links a {
-      color: #333333;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
+
+    .hero p {
+      font-size: 1.2rem;
     }
-    .social-links a:hover {
-      color: #007bff;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #355C7D;
+    }
+
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Azienda XYZ</h1>
-    <p>Hub di Contatti</p>
+    <h1>TAPnTRADE</h1>
+    <nav>
+      <a href="#prodotti">Prodotti</a>
+      <a href="#chi-siamo">Chi siamo</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
   </header>
-  <main>
-    <section class="history">
-      <h2>La Nostra Storia</h2>
-      <p>Fondata nel 1990, Azienda XYZ è cresciuta da un piccolo laboratorio artigianale fino a diventare un punto di riferimento nel settore, combinando tradizione e innovazione per offrire prodotti di alta qualità ai nostri clienti in tutto il mondo.</p>
-    </section>
-    <section class="purchase-links">
-      <a href="https://www.amazon.it" target="_blank" rel="noopener">Amazon</a>
-      <a href="https://www.etsy.com" target="_blank" rel="noopener">Etsy</a>
-      <a href="https://www.ourshop.com" target="_blank" rel="noopener">Negozio Ufficiale</a>
-    </section>
-  </main>
-  <footer>
-    <div class="social-links">
-      <a href="https://www.facebook.com/aziendaXYZ" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/aziendaXYZ" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.twitter.com/aziendaXYZ" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-      <a href="mailto:info@aziendaxyz.it"><i class="fas fa-envelope"></i></a>
+
+  <section class="hero">
+    <h2>Scopri il tuo prossimo colpo fortunato</h2>
+    <p>Box sealed, carte singole, espansioni rare: tutto il meglio del TCG in un solo posto!</p>
+  </section>
+
+  <section class="cards" id="prodotti">
+    <div class="card">
+      <h3>Magic: The Gathering</h3>
+      <p>Espansioni nuove e vintage, sealed e carte singole.</p>
     </div>
+  </section>
+
+  <footer class="footer" id="contatti">
+    <p>&copy; 2025 TAPnTRADE. Tutti i diritti riservati.</p>
   </footer>
+
 </body>
 </html>
